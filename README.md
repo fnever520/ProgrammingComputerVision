@@ -6,4 +6,4 @@
 	( refer to the HDR folder )
 	
 
-@ HW2 : kernel.ipynb
+@ HW2 : 3-kernel.ipynb
