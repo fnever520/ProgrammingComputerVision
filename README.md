@@ -4,4 +4,6 @@
 
 @ HW1 : HDR on different light exposure on the image 
 	( refer to the HDR folder )
+	
+
 @ HW2 : kernel.ipynb
