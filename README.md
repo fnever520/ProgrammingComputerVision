@@ -12,4 +12,8 @@
 
 @ HW4 : 5-PerspectiveTransform.ipynb
 
-@ 6 - Augmenting Reality/*
+@ 6 - Augmenting Reality/
+
+@ HW7 - 7-EpiolarGeometry.py
+
+FinalPresentation - Autostitch.pptx

@@ -30,7 +30,7 @@ def main():
     # A = [0 fv v0][ycam]  - u0,v0 is the projection of the optical centre
     #     [0  0  1][zcam]
 
-    camera_parameters = np.array([[700, 0, 320], [0, 700, 240], [0, 0, 1]])
+    camera_parameters = np.array([[800, 0, 320], [0, 800, 240], [0, 0, 1]])
     # create ORB keypoint detector
     orb = cv2.ORB_create()
     # create BFMatcher object based on hamming distance  
@@ -44,7 +44,10 @@ def main():
     obj = OBJ(os.path.join(dir_name, 'models/fox.obj'), swapyz=True)  
     # init video capture
     cap = cv2.VideoCapture(0)
-
+    #added
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    out = cv2.VideoWriter('output.avi', fourcc, 20.0, (640, 480))
+     
     while True:
         # read the current frame
         ret, frame = cap.read()
@@ -89,6 +92,7 @@ def main():
             if args.matches:
                 frame = cv2.drawMatches(model, kp_model, frame, kp_frame, matches[:10], 0, flags=2)
             # show result
+            out.write(frame)
             cv2.imshow('frame', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
